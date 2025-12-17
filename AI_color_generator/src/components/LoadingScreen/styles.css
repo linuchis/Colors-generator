@@ -1,0 +1,44 @@
+/* src/components/LoadingScreen/styles.css */
+
+/* 1. El contenedor principal */
+.loading-container {
+  /* Esto asegura que ocupe toda la altura visible de la pantalla */
+  height: 100vh; 
+  width: 100%;
+  
+  /* Flexbox para centrar perfectamente el contenido */
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+  
+  /* Opcional: un color de fondo suave */
+  background-color: #f8f9fa;
+}
+
+/* 2. El spinner (el círculo) */
+.loading-spinner {
+  width: 50px;            /* Tamaño del spinner */
+  height: 50px;
+  
+  /* Creamos el borde circular */
+  border: 5px solid #e0e0e0; /* Color gris claro para el fondo del borde */
+  /* Color del borde que gira (cámbialo al color primario de tu app) */
+  border-top: 5px solid #3498db; 
+  border-radius: 50%;      /* Esto lo convierte en un círculo */
+  
+  /* Aplicamos la animación definida abajo */
+  /* nombre | duración | tipo de velocidad | repetición */
+  animation: spin 1s linear infinite;
+}
+
+/* 3. La definición de la animación "spin" */
+@keyframes spin {
+  0% {
+    /* Empieza en 0 grados */
+    transform: rotate(0deg);
+  }
+  100% {
+    /* Termina dando la vuelta completa */
+    transform: rotate(360deg);
+  }
+}
