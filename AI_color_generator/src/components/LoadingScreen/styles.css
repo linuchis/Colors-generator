@@ -1,44 +1,76 @@
-/* src/components/LoadingScreen/styles.css */
-
 /* 1. El contenedor principal */
 .loading-container {
-  /* Esto asegura que ocupe toda la altura visible de la pantalla */
-  height: 100vh; 
-  width: 100%;
-  
-  /* Flexbox para centrar perfectamente el contenido */
+  /* fixed para que cubra absolutamente todo, incluso si hay márgenes en el body */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Centrado del spinner */
   display: flex;
-  justify-content: center; /* Centrado horizontal */
-  align-items: center;     /* Centrado vertical */
-  
-  /* Opcional: un color de fondo suave */
-  background-color: #f8f9fa;
+  justify-content: center;
+  align-items: center;
+  /* Gradiente de fondo */
+  background: linear-gradient(135deg, #FA54BB 0%, #ECBFFA 100%);
+  /* Asegura que esté por encima de todo el resto de la app */
+  z-index: 9999;
+  /* Evita que las imágenes grandes generen scrollbars si se salen un poco */
+  overflow: hidden;
+  transition: opacity 0.8s ease-out, visibility 0.8s;
+  opacity: 1;
+  visibility: visible;
 }
 
-/* 2. El spinner (el círculo) */
-.loading-spinner {
-  width: 50px;            /* Tamaño del spinner */
-  height: 50px;
+.loading-container.loading-hidden {
+  opacity: 0;           /* Se vuelve invisible */
+  visibility: hidden;   /* Se desactiva para que puedas dar click a lo de abajo */
+  pointer-events: none; /* Asegura que el mouse traspase el loader */
+}
+
+
+/* 2. Estilos comunes para las imágenes de fondo */
+.bg-shape {
+  position: absolute;
+  width: 70%;
+  height: auto; /* Mantiene la proporción */
+  pointer-events: none; /* Buena práctica: que los clicks las atraviesen */
+  z-index: 1; /* Nivel bajo, detrás del spinner */
+  opacity: 0.8; /* Opcional: un poco de transparencia para que se mezclen mejor */
+}
+
+/* Posicionamiento específico de cada elipse */
+/* Juega con estos valores 'top/left/bottom/right' para moverlas a tu gusto */
+.bg-green-elipse {
+  top: -15%;
+  left: -15%;
+}
+
+.bg-orange-elipse {
+  bottom: -15%;
+  right: -15%;
+}
+
+/* 3. El nuevo spinner (la imagen SVG) */
+.loading-svg-spinner {
+  /* Define el tamaño que quieras para tu icono de carga */
+  width: 60px;
+  height: 60px;
   
-  /* Creamos el borde circular */
-  border: 5px solid #e0e0e0; /* Color gris claro para el fondo del borde */
-  /* Color del borde que gira (cámbialo al color primario de tu app) */
-  border-top: 5px solid #3498db; 
-  border-radius: 50%;      /* Esto lo convierte en un círculo */
+  /* Asegura que esté por delante de las elipses de fondo */
+  z-index: 10;
   
-  /* Aplicamos la animación definida abajo */
+  
+  /* REQUERIMIENTO 3: Aplicar la animación de giro a la imagen */
   /* nombre | duración | tipo de velocidad | repetición */
-  animation: spin 1s linear infinite;
+  animation: spin 1.8s linear infinite;
 }
 
-/* 3. La definición de la animación "spin" */
+/* La definición de la animación sigue siendo la misma */
 @keyframes spin {
-  0% {
-    /* Empieza en 0 grados */
+  from {
     transform: rotate(0deg);
   }
-  100% {
-    /* Termina dando la vuelta completa */
-    transform: rotate(360deg);
+  to {
+    transform: rotate(-360deg);
   }
 }

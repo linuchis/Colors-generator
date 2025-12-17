@@ -1,0 +1,17 @@
+.home-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, 
+  #FFD8C8 4%,  
+  #D1609C 60% );
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  font-family: sans-serif;
+}
+
