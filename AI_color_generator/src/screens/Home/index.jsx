@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import LoadingScreen from '../../components/LoadingScreen';
 import './styles-home.css'; 
+import BackgroundScreen from '../../components/BackgroundScreen'; // <--- 1. Importar
+
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true); 
@@ -62,12 +64,10 @@ const Home = () => {
             </section>
           </section>
         </main>
-
-
-        <h1>Bienvenido a la Home</h1>
-        <p>Este contenido ya estaba aquí, esperando a ser revelado.</p>
-        {/* Aquí va tu Dashboard, etc. */}
       </div>
+      <BackgroundScreen />
+
+
       
     </div>
   );
