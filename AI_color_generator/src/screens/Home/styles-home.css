@@ -32,3 +32,20 @@
   align-items: center;
   justify-content: center;
 }
+
+.sidebar-header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.models-contenedor {
+  display: flex;
+  justify-content: space-between;
+}

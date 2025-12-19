@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   /* Gradiente de fondo */
-  background: linear-gradient(135deg, #FA54BB 0%, #ECBFFA 100%);
+  background: linear-gradient(135deg, #380c65 0%, #774387 100%);
   /* Asegura que esté por encima de todo el resto de la app */
   z-index: 9999;
   /* Evita que las imágenes grandes generen scrollbars si se salen un poco */

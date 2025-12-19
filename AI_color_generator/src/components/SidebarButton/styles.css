@@ -1,0 +1,15 @@
+.sidebar-button {
+  background-color: hsl(0, 0%, 100%, 0.65); 
+  border: none;
+  color: #7A1D9C;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 80%;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif; /*Pendiente por agregar la fuente que se usa en Figma */
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+}

@@ -5,7 +5,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, #FA54BB 0%, #ECBFFA 100%);
+  background: linear-gradient(135deg, #70461a 0%, #276c2e 100%);
   z-index: -1; /* Esto lo pone DETRÁS del contenido normal (que es z-index: 0 o auto) */
   overflow: hidden;
   pointer-events: none; 
