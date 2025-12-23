@@ -1,16 +1,81 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 🎨 ColorSense AI!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a **web application under active development** aimed at generating **color palettes from images**, combining clustering techniques and future AI-based approaches guided by visual styles.
 
-## React Compiler
+As of **December 2025**, the project is still in its early development stage and does not yet include finalized model results.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<img width="1484" height="877" alt="image" src="https://github.com/user-attachments/assets/17f896c0-c37a-49eb-812f-feffaa932f4d" />
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Project Motivation
+
+This is a personal project inspired by the idea that **color selection is often driven by visual references**.
+
+Historically, artists, designers, and creators have taken inspiration from specific sets of visual data (such as landscapes, photographs, or materials) to define color palettes for clothing, artwork, or design pieces. This project follows the same principle.
+
+While tools like Adobe Color are powerful, manually selecting colors can feel tedious. This application aims to **automate and guide that process**, allowing users to extract and reinterpret colors from images that genuinely represent their creative vision.
+
+---
+
+## ✨ Project Goal
+
+- Extract the main colors present in an image.
+- Preserve the original color relationships and patterns.
+- Allow users to generate **enhanced palettes** guided by a chosen visual style  
+  (e.g. vintage, pastel, cinematic, minimal).
+
+---
+
+## ⚙️ Current Implementation
+
+- **Frontend:** React (Vite)
+- **Models:**
+  - K-means clustering (planned, not yet producing final results)
+  - AI-based model (to be defined)
+- **Status:** Development phase (no production-ready models yet)
+
+---
+
+## 🚧 Project Status
+
+- No model outputs available yet.
+- Initial focus is on frontend structure and user flow.
+- Models and backend will be implemented in a later stage.
+
+---
+
+## 🧪 Methodology (Conceptual)
+
+The intended workflow of the project is as follows:
+
+1. **Image Input**
+   - User uploads an image as the main visual reference.
+
+2. **Color Analysis**
+   - Extract raw color data from the image.
+   - Identify dominant colors using clustering techniques (e.g. K-means).
+
+3. **Pattern Preservation**
+   - Maintain the original color relationships and distribution patterns.
+
+4. **Style Guidance**
+   - Apply transformations guided by a selected style (vintage, pastel, etc.).
+   - Enhance the palette while keeping its visual coherence.
+
+5. **Palette Output**
+   - Generate a refined color palette ready for creative use.
+
+*(This methodology is subject to change as the project evolves.)*
+
+---
+
+## 🖥️ Running the Project Locally
+
+```bash
+npm install
+npm run dev
+
