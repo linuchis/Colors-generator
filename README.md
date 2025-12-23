@@ -38,6 +38,7 @@ While tools like Adobe Color are powerful, manually selecting colors can feel te
   - K-means clustering (planned, not yet producing final results)
   - AI-based model (to be defined)
 - **Status:** Development phase (no production-ready models yet)
+<img width="1280" height="525" alt="process" src="https://github.com/user-attachments/assets/0e71dc8f-3136-4f9f-aafc-af302d0a9a30" />
 
 ---
 
