@@ -1,0 +1,63 @@
+
+.select-container {
+  position: relative;
+  width: 220px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.select-header {
+  background-color: white;
+  padding: 12px 25px;
+  border-radius: 999px; /* Forma de píldora */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  color: #c471ed; /* Morado de la imagen */
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.select-header:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* El icono de la flecha */
+.chevron {
+  transition: transform 0.3s ease;
+  stroke: #c471ed; /* Mismo morado */
+}
+
+.chevron.rotate {
+  transform: rotate(180deg);
+}
+
+/* Lista de opciones */
+.select-options {
+  position: absolute;
+  top: 110%; /* Un poco separado hacia abajo */
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 20px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.select-options li {
+  padding: 12px 25px;
+  cursor: pointer;
+  color: #666;
+  transition: background 0.2s;
+}
+
+.select-options li:hover {
+  background-color: #fdf0f2; /* El rosado tenue que usamos antes */
+  color: #c471ed;
+}

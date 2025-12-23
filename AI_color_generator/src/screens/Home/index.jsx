@@ -5,6 +5,9 @@ import BackgroundScreen from '../../components/BackgroundScreen';
 import SidebarButton from '../../components/SidebarButton'; 
 import AppLogo from '../../assets/Forms/logo_app.svg';
 import ModelsButton from '../../components/ModelsButton';
+import StepperButton from '../../components/StepperButton';
+import ToggleSwitch from '../../components/ToggleSwitch';
+import DropdownButton from '../../components/DropdownButton';
 
 
 const Home = () => {
@@ -22,7 +25,7 @@ const Home = () => {
   return (
     <div style={{ position: 'relative' }}> {/* Contenedor base */}
       
-      {/* 1. El Loader siempre está en el código, pero le pasamos el estado */}
+      {/* El Loader siempre está en el código, pero le pasamos el estado */}
       <LoadingScreen isVisible={isLoading} />
 
       {/* 2. El contenido de home */}
@@ -71,16 +74,19 @@ const Home = () => {
                 <div>
                   <h2>Palette size</h2>
                   {/* Aquí va el llamado al componente palette size*/}
+                  <StepperButton />
                 </div>
 
                 <div>
                   <h2>Clean Palette?</h2>
                   {/* Aquí va el llamado al componente clean palette */}
+                  <ToggleSwitch />
                 </div> 
 
                 <div>
                   <h2>Armony</h2>
                   {/* Aquí va el llamado al componente Armony */}
+                  <DropdownButton />
                 </div> 
 
               </div>
