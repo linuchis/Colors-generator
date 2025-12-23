@@ -8,6 +8,7 @@ import ModelsButton from '../../components/ModelsButton';
 import StepperButton from '../../components/StepperButton';
 import ToggleSwitch from '../../components/ToggleSwitch';
 import DropdownButton from '../../components/DropdownButton';
+import FileUpload from '../../components/UploadImageSection';
 
 
 const Home = () => {
@@ -41,6 +42,7 @@ const Home = () => {
               
               <h1>AI Color Generator</h1>
               <p>Generate color palettes using AI</p>
+              {/* esteeeeeeeeeeeeeeeeeeeeeeeeeee*/}
               <img src={AppLogo} alt="Logo" className="sidebar-logo" />
             </div>
             
@@ -73,19 +75,19 @@ const Home = () => {
 
                 <div>
                   <h2>Palette size</h2>
-                  {/* Aquí va el llamado al componente palette size*/}
+                  {/*  palette size = StepperButton */}
                   <StepperButton />
                 </div>
 
                 <div>
                   <h2>Clean Palette?</h2>
-                  {/* Aquí va el llamado al componente clean palette */}
+                  {/*  clean palette = ToggleSwitch */}
                   <ToggleSwitch />
                 </div> 
 
                 <div>
                   <h2>Armony</h2>
-                  {/* Aquí va el llamado al componente Armony */}
+                  {/* Armony = DropdownButton */}
                   <DropdownButton />
                 </div> 
 
@@ -95,6 +97,7 @@ const Home = () => {
             <section className='section-upload-image'>
               <h2>Upload the image</h2>
               <p>Aquí va el componente de subir imágenes</p>
+              <FileUpload />
             </section>
 
             <section className='section-upload-image-button'>
